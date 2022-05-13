@@ -1,0 +1,36 @@
+{
+  "name": "eyp-pt-inventory-backend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogoidmatos/eyp-pt-inventory-backend.git"
+  },
+  "author": "Diogo Matos",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ogoidmatos/eyp-pt-inventory-backend/issues"
+  },
+  "homepage": "https://github.com/ogoidmatos/eyp-pt-inventory-backend#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "prisma": "^3.14.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0"
+  }
+}
