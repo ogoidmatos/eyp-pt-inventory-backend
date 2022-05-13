@@ -1,36 +1,45 @@
 {
-  "name": "eyp-pt-inventory-backend",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ogoidmatos/eyp-pt-inventory-backend.git"
-  },
-  "author": "Diogo Matos",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/ogoidmatos/eyp-pt-inventory-backend/issues"
-  },
-  "homepage": "https://github.com/ogoidmatos/eyp-pt-inventory-backend#readme",
-  "devDependencies": {
-    "@types/node": "^17.0.33",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "eslint": "^8.15.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.2",
-    "prisma": "^3.14.0",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "@prisma/client": "^3.14.0"
-  }
+	"name": "eyp-pt-inventory-backend",
+	"version": "0.1.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "npx tsc",
+		"start": "node dist/index.js",
+		"dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ogoidmatos/eyp-pt-inventory-backend.git"
+	},
+	"author": "Diogo Matos",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/ogoidmatos/eyp-pt-inventory-backend/issues"
+	},
+	"homepage": "https://github.com/ogoidmatos/eyp-pt-inventory-backend#readme",
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/node": "^17.0.33",
+		"@typescript-eslint/eslint-plugin": "^5.23.0",
+		"@typescript-eslint/parser": "^5.23.0",
+		"concurrently": "^7.1.0",
+		"eslint": "^8.15.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^2.7.1",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"nodemon": "^2.0.16",
+		"prettier": "^2.6.2",
+		"prisma": "^3.14.0",
+		"ts-node": "^10.7.0",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"@prisma/client": "^3.14.0",
+		"@types/cors": "^2.8.12",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1"
+	}
 }
