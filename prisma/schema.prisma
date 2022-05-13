@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Users {
-  id String @id
-  name String @db.VarChar(255)
+  id     String  @id
+  name   String  @db.VarChar(255)
   status Boolean @default(value: false)
-  role Boolean @default(value: false)
+  role   Boolean @default(value: false)
 }
