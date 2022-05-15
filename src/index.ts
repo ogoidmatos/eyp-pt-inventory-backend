@@ -1,6 +1,7 @@
-import express, { Express, NextFunction, Request, Response } from 'express';
+import express, { Express, NextFunction, Response } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import { Request as JWTRequest } from 'express-jwt';
 import { errorHandler } from './middleware/handlers';
 import { PrismaClient } from '@prisma/client';
 import userRouter from './api/users';
@@ -22,17 +23,16 @@ const corsOptions = {
 const app: Express = express();
 const port = process.env.PORT || 5000;
 
+const prisma = new PrismaClient();
+
 app.use(express.json());
 app.use(cors(corsOptions));
 
 app.use(errorHandler);
 
 //database connection
-app.use((req: Request, res: Response, next: NextFunction) => {
-	req.prisma = new PrismaClient();
-
-	//terminate db connection on end of request
-	res.once('finish', () => req.prisma.$disconnect());
+app.use((req: JWTRequest, res: Response, next: NextFunction) => {
+	req.prisma = prisma;
 	next();
 });
 
